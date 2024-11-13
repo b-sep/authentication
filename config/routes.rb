@@ -6,6 +6,10 @@ Rails.application.routes.draw do
       controller :foo_bar do
         get 'foo-bar' => :foo_bar
       end
+
+      controller :generate_token do
+        post 'generate_token' => :generate_token
+      end
     end
   end
 
