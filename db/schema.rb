@@ -11,13 +11,13 @@
 # It's strongly recommended that you check this file into your version control system.
 
 ActiveRecord::Schema[8.0].define(version: 2024_11_13_174147) do
-  create_table "api_tokens", force: :cascade do |t|
-    t.string "token", null: false
-    t.datetime "expires_at", default: -> { "datetime('now', '+1 year')" }, null: false
-    t.integer "active", default: 0, null: false
-    t.string "user_email", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["token"], name: "index_api_tokens_on_token", unique: true
+  create_table 'api_tokens', force: :cascade do |t|
+    t.string 'token', null: false
+    t.datetime 'expires_at', default: -> { "datetime('now', '+1 year')" }, null: false
+    t.boolean 'active', default: true
+    t.string 'user_email', null: false
+    t.datetime 'created_at', null: false
+    t.datetime 'updated_at', null: false
+    t.index %w[token user_email], name: 'index_api_tokens_on_token_and_user_email', unique: true
   end
 end
