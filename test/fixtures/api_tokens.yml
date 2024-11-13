@@ -3,11 +3,11 @@
 one:
   token: first_token
   expires_at: 2024-11-13 14:41:47
-  active: 1
-  user_email: MyString
+  active: true
+  user_email: email@email.com
 
 two:
   token: second_token
   expires_at: 2024-11-13 14:41:47
-  active: 1
-  user_email: MyString
+  active: false
+  user_email: emailtwo@email.com
