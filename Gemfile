@@ -27,6 +27,13 @@ gem 'thruster', require: false
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin Ajax possible
 # gem "rack-cors"
 
+group :development do
+  gem 'rubocop', '~> 1.68', require: false
+  gem 'rubocop-minitest', '~> 0.36.0', require: false
+  gem 'rubocop-performance', '~> 1.22', require: false
+  gem 'rubocop-rails', '~> 2.27', require: false
+end
+
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem 'debug', platforms: %i[mri windows], require: 'debug/prelude'
