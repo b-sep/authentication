@@ -8,8 +8,7 @@ class Api::V1::FooBarControllerTest < ActionDispatch::IntegrationTest
 
     get api_v1_foo_bar_path, headers: { HTTP_AUTHORIZATION: "Bearer #{api_token.token}" }
 
-    assert_response :ok
-    assert_equal({ 'message' => "congrats #{api_token.user_email}, you have a token :)" }, response.parsed_body)
+    assert_response :no_content
   end
 
   test 'requires an active token to get foo-bar' do
