@@ -30,7 +30,7 @@ gem 'thruster', require: false
 group :development do
   gem 'rubocop', '~> 1.68', require: false
   gem 'rubocop-minitest', '~> 0.36.0', require: false
-  gem 'rubocop-performance', '~> 1.22', require: false
+  gem 'rubocop-performance', '~> 1.23', require: false
   gem 'rubocop-rails', '~> 2.27', require: false
 end
 
